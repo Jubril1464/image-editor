@@ -20,7 +20,7 @@ Persistence: The settings (image size, grayscale, blur) are persisted in the bro
 
 
 Installation
-git clone https://github.com/your-username/image-editing-tool.git
+git clone https://github.com/Jubril1464/image-editor.git
 cd image-editing-tool
 npm install
 npm run dev
