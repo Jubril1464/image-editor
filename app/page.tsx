@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import ImageCard from "./components/ImageCard";
 import Pagination from "./components/Pagination";
-import { MutatingDots } from "react-loader-spinner";
+
 
 export default function Gallery() {
   const [images, setImages] = useState([]);
@@ -28,15 +28,7 @@ export default function Gallery() {
     <div className="p-6">
       {loading ? (
         <div className="flex justify-center items-center h-full">
-          <MutatingDots
-            color="#3B82F6"
-            secondaryColor="#3B82F6"
-            height={100}
-            width={100}
-            radius={12.5}
-            ariaLabel="mutating-dots-loading"
-            visible={true}
-          />
+         <h1>Loading...</h1>
         </div>
       ) : (
         <>
