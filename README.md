@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Image Editing Tool
+This is a simple image editing tool built with Next.js, TailwindCSS, and TypeScript. The application allows users to browse, edit, and download images. Users can adjust the image size, apply grayscale and blur effects, and download the edited image.
 
-## Getting Started
+Project Structure
+pages/: Contains the application's route files. index.tsx displays the image gallery, and edit/[id].tsx provides the interface to edit an individual image.
+components/: Contains reusable UI components.
+utils/: Contains helper functions for handling local storage.
+public/: Stores public assets like images and icons.
+styles/: Contains the global and TailwindCSS configurations.
+Technologies Used
+Next.js: React framework for server-side rendering and routing.
+TailwindCSS: Utility-first CSS framework for styling.
+TypeScript: Strongly typed superset of JavaScript for type safety.
+Picsum Photos API: A free API for placeholder images.
+Features
+Browse Images: View images from the Picsum Photos API with pagination.
+Edit Images: Change the size, apply grayscale, and apply blur to the images.
+Download Image: Download the edited image directly without opening a new page.
+Persistence: The settings (image size, grayscale, blur) are persisted in the browser's localStorage and restored when the page is refreshed.
 
-First, run the development server:
 
-```bash
+Installation
+git clone https://github.com/your-username/image-editing-tool.git
+cd image-editing-tool
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Usage
+Gallery Page: When you open the app, you'll be taken to the gallery page where you can browse images. Each image can be clicked to navigate to the edit page.
+Edit Image: On the edit page, you can adjust the image width, height, apply grayscale, and blur the image. You can also download the edited image directly.
+Local Storage: The settings for width, height, grayscale, and blur are saved in the localStorage, so when you refresh the page, the settings will be retained.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+File Structure:
+/image-editor
+├── /components
+│   └── ImageCard.tsx
+├── /pages
+│   ├── index.tsx
+│   └── /edit/[id].tsx
+├── /public
+│   └── /images
+├── /styles
+│   └── globals.css
+├── /utils
+│   └── localstorage.ts
+├── tailwind.config.js
+├── next.config.js
+├── tsconfig.json
+└── package.json
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Technologies
+Next.js: For server-side rendering and routing.
+TailwindCSS: For styling the application with utility-first classes.
+TypeScript: For type safety and better development experience.
+Picsum API: Used for fetching random images for the gallery and editing.
